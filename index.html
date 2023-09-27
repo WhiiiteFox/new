@@ -172,5 +172,29 @@
       });
     });
   </script>
+
+<script>
+  // Bloquear o botão direito do mouse
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+// Desabilitar copiar/colar
+document.addEventListener('copy', function(e) {
+    e.preventDefault();
+});
+
+document.addEventListener('paste', function(e) {
+    e.preventDefault();
+});
+
+// Desabilitar inspecionar
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'F12' || (e.ctrlKey && e.key === 'Shift' && e.key === 'I')) {
+        e.preventDefault();
+    }
+});
+</script>
+  
 </body>
 </html>
